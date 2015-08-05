@@ -1,17 +1,23 @@
-worktracker
+Time Watcher
 ============
 
-Appverse Web 
+Powered by Appverse Web 
 ============
 
-This is the repository of the Appverse Web HTML5 Bolierplate subproject. It provides an starting point for an Appverse Web HTML5 project
-Appverse Web is a multi-frontend technology capable web application framework incorporating the best-of-breed open source stack to meet the challenges of secure and robust server-side service development, integration and delivery.
+Time Watcher is a tool to help controlling the time spent on different tasks. It is writen in HTML5 and based on Appverse HTML5 platform as a AngulaJS reference architecture. 
+
+Following are just Roadmap task description:
+- Support configuration of tasks or categories where time is spent.
+- Start and stop time usage in a categorie
+- Graphs and report
+
+- Mobile, Desktop and Web versions are planned.
+
 
 ## More Information
 
-* **About this project**: <http://appverse.github.com/appverse-web-html5-boilerplate>
-* **About Appverse Web HTML5 Module**: <http://appverse.github.com/appverse-web-html5-core>
-* **About licenses & groups**: <http://appverse.github.com>
+* **About this project**: not yet a web
+* **About licenses & groups**: MIT
 * **About The Appverse Project**: <http://appverse.org>
 
 ### Quick Start
