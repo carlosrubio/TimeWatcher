@@ -10,4 +10,5 @@ before_script:
   - 'bower install' # install bower packages
 
 after_script:
-  - 'grunt test' # or other command for build, run tests, etc
+  - 'grunt test:unity' # or other command for build, run tests, etc
+  - 'grunt test:integration' # or other command for build, run tests, etc
