@@ -4,3 +4,5 @@ node_modules
 webkitbuilds
 cache
 dist
+test/coverage
+test-results.xml

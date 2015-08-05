@@ -5,7 +5,7 @@ angular.module('App.Controllers')
 .controller('homeController',
     function ($log,$scope, Loki ) {
         $log.debug('homeController loading');
-
+        $scope.greeting = 'Welcome';
     //var DB_FILE = 'demo.json';
 
       $scope.newContact = {};
@@ -33,7 +33,7 @@ angular.module('App.Controllers')
         this.close(true); // don't forget this line, else you can't close window
       });*/
 
-      $scope.insert = function () {
+     /* $scope.insert = function () {
         $scope.contacts.insert($scope.newContact);
         $scope.newContact = {};
       };
@@ -61,6 +61,6 @@ angular.module('App.Controllers')
         $scope.db.saveDatabase();
 
             console.log($scope);
-           //$scope.$apply();
+           //$scope.$apply();*/
 
     });
