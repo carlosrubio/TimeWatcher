@@ -1,0 +1,13 @@
+{
+    "WELCOME": "Welcome!",
+    "WELCOME_NAME": "Welcome {{name}} !",
+    "WELCOME_NAME_AGE": "Welcome {{name}}, you are {{age}} year(s) old!",
+    "SUBTITLE": "Your project is ready.",
+    "CHECK": "Check the Appverse Showcase for more examples.",
+    "THANKS": "Thank you for using AppVerse.",
+    "NAV.HOME":"Home",
+    "NAV.THEME" : "Theme",
+    "NAV.COMPONENTS" : "Components",
+    "NAV.CHARTS" : "Charts",
+    "NAV.CURRENCIES" : "Currencies"
+}

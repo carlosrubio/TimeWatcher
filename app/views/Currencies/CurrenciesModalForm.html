@@ -1,0 +1,135 @@
+    <div class="modal-header">
+        <h3 class="modal-title">{{title}}</h3>
+    </div>
+    <div class="modal-body">
+        <form class="form-horizontal" name="CurrenciesForm">
+            
+            <div class="form-group" ng-class="{'has-success has-feedback': CurrenciesForm.id.$valid && CurrenciesForm.id.$dirty, 'has-error has-feedback': CurrenciesForm.id.$invalid && CurrenciesForm.id.$dirty}">
+               <label class="col-sm-2" for='id'>Id</label>
+               <div class="col-sm-10">
+                    <input type='text' name="id" class="form-control  ng-touched" ng-model='item.id' ng-disabled="false" >
+                    
+                    
+                    
+                    
+               </div>
+           </div>
+    
+        
+            <div class="form-group" ng-class="{'has-success has-feedback': CurrenciesForm.symbol.$valid && CurrenciesForm.symbol.$dirty, 'has-error has-feedback': CurrenciesForm.symbol.$invalid && CurrenciesForm.symbol.$dirty}">
+               <label class="col-sm-2" for='symbol'>Symbol</label>
+               <div class="col-sm-10">
+                    <input type='text' name="symbol" class="form-control  ng-touched" ng-model='item.symbol' ng-disabled="false" required>
+                    
+                        <span ng-show="CurrenciesForm.symbol.$valid && CurrenciesForm.symbol.$dirty" class="form-control-feedback ng-scope glyphicon glyphicon-ok"></span>
+                        <span ng-show="CurrenciesForm.symbol.$invalid && CurrenciesForm.symbol.$dirty" class="form-control-feedback ng-scope glyphicon glyphicon-remove"></span>
+                    
+                    
+                        <span class="text-danger" ng-show="CurrenciesForm.symbol.$error.required">Symbol is required.</span>
+                    
+                    
+               </div>
+           </div>
+    
+        
+        <div class="form-group" ng-class="{'has-success has-feedback': CurrenciesForm.updated.$valid && CurrenciesForm.updated.$dirty, 'has-error has-feedback': CurrenciesForm.updated.$invalid && CurrenciesForm.updated.$dirty}">
+             
+                    <span ng-show="CurrenciesForm.updated.$valid && CurrenciesForm.updated.$dirty" class="form-control-feedback ng-scope glyphicon glyphicon-ok"></span>
+                    <span ng-show="CurrenciesForm.updated.$invalid && CurrenciesForm.updated.$dirty" class="form-control-feedback ng-scope glyphicon glyphicon-remove"></span>
+            <label class="col-sm-2" for='updated'>Updated</label>
+            <div class="col-md-6">
+                <p class="input-group">
+                <input type="text" name="updated" class="form-control" ng-model='item.updated' datepicker-popup="{{format}}" ng-model='item.updated' is-open="datepicker.openedupdated" close-text="Close" datepicker-options="dateOptions" ng-required="true">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="openCalendar($event,'openedupdated')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </p>
+                
+                <span class="text-danger" ng-show="CurrenciesForm.updated.$error.required">Updated is required.</span>
+            </div>
+        </div>
+        
+        
+            <div class="form-group" ng-class="{'has-success has-feedback': CurrenciesForm.code.$valid && CurrenciesForm.code.$dirty, 'has-error has-feedback': CurrenciesForm.code.$invalid && CurrenciesForm.code.$dirty}">
+                
+                    <span ng-show="CurrenciesForm.code.$valid && CurrenciesForm.code.$dirty" class="form-control-feedback ng-scope glyphicon glyphicon-ok"></span>
+                    <span ng-show="CurrenciesForm.code.$invalid && CurrenciesForm.code.$dirty" class="form-control-feedback ng-scope glyphicon glyphicon-remove"></span>
+                    
+                        <label class="col-sm-2" for='code'>
+                            Code
+                        </label>
+                        <div class="col-sm-10">
+                            <input type='number' name="code" class="form-control  ng-touched" nane='code' ng-model='item.code' ng-disabled="false"  max='10' min='2'
+                             required>
+                             
+                                 <span class="text-danger" ng-show="CurrenciesForm.code.$error.required">Code is required.</span>
+                             
+                              <span class="text-danger" ng-show="CurrenciesForm.code.$error.max">Code is too big, max 10</span>
+                              <span class="text-danger" ng-show="CurrenciesForm.code.$error.min">Code is too small, min 2</span>
+                        </div>
+            </div>
+            
+        
+            <div class="form-group" ng-class="{'has-success has-feedback': CurrenciesForm.name.$valid && CurrenciesForm.name.$dirty, 'has-error has-feedback': CurrenciesForm.name.$invalid && CurrenciesForm.name.$dirty}">
+               <label class="col-sm-2" for='name'>Name</label>
+               <div class="col-sm-10">
+                    <input type='text' name="name" class="form-control  ng-touched" ng-model='item.name' ng-disabled="false"  maxlength='20' minlength='1' >
+                    
+                        <span ng-show="CurrenciesForm.name.$valid && CurrenciesForm.name.$dirty" class="form-control-feedback ng-scope glyphicon glyphicon-ok"></span>
+                        <span ng-show="CurrenciesForm.name.$invalid && CurrenciesForm.name.$dirty" class="form-control-feedback ng-scope glyphicon glyphicon-remove"></span>
+                    
+                    
+                    <span class="text-danger" ng-show="CurrenciesForm.name.$error.minlength">Name is too short, minimum 1</span>
+                    <span class="text-danger" ng-show="CurrenciesForm.name.$error.maxLength">Name is too long, maximum 20</span>
+                    
+               </div>
+           </div>
+    
+        
+                <div class="form-group">
+                    <label class="col-sm-2">Active</label>
+                    <div class="col-sm-10">
+                        <input type="checkbox" ng-model='item.active' name="active">
+                    </div>
+                </div>
+            
+        
+                <div class="form-group" ng-class="{'has-success has-feedback': CurrenciesForm.country.$valid && CurrenciesForm.country.$dirty, 'has-error has-feedback': CurrenciesForm.country.$invalid && CurrenciesForm.country.$dirty}">
+                    <label class="col-sm-2" for='country'>
+                        Country
+                    </label>
+                    <div class="col-sm-10">
+                        <select class="form-control" name="country" ng-model='item.country' required>
+                    </div>
+                    
+                    <option value='FR'>
+                        FR
+                    </option>
+                    
+                    <option value='SP'>
+                        SP
+                    </option>
+                    
+                    <option value='IT'>
+                        IT
+                    </option>
+                    
+                    <option value='US'>
+                        US
+                    </option>
+                    
+                    </select>
+                    
+                        <span ng-show="CurrenciesForm.country.$valid && CurrenciesForm.country.$dirty" class="form-control-feedback ng-scope glyphicon glyphicon-ok"></span>
+                        <span ng-show="CurrenciesForm.country.$invalid && CurrenciesForm.country.$dirty" class="form-control-feedback ng-scope glyphicon glyphicon-remove"></span>
+                        <span class="text-danger" ng-show="CurrenciesForm.country.$error.required">Country is required.</span>
+                    
+                </div>
+    
+        
+            </form>
+            </div>
+            <div class="modal-footer">
+                <button angular-ripple type="submit" class="btn btn-default" ng-click="cancel()">Cancel</button>
+                <button angular-ripple type="submit" class="btn btn-action" ng-click="ok(item)" ng-disabled="!CurrenciesForm.$valid">{{item.id?'Save':'Add'}}</button>
+            </div>

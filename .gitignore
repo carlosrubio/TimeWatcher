@@ -1,0 +1,6 @@
+.tmp
+app/bower_components
+node_modules
+webkitbuilds
+cache
+dist
