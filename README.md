@@ -1,4 +1,5 @@
 Time Watcher
+https://travis-ci.org/carlosrubio/TimeWatcher.svg?branch=master 
 ============
 
 Powered by Appverse Web 
