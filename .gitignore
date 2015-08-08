@@ -6,3 +6,10 @@ cache
 dist
 test/coverage
 test-results.xml
+_replicator
+_users
+pouch__all_dbs__
+pouch__auth_sessions__
+todos
+config.json
+log.txt

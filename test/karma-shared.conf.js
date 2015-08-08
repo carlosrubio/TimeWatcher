@@ -45,10 +45,10 @@ module.exports = function () {
             'app/bower_components/angular-resource/angular-resource.min.js',
             'app/bower_components/angular-cache/dist/angular-cache.min.js',
             'app/bower_components/ng-grid/build/ng-grid.min.js',
-            'app/bower_components/lokijs/build/lokijs.min.js',
+            'bower_components/angular-pouchdb/angular-pouchdb.js',
+            'bower_components/pouchdb/dist/pouchdb.js',
 
-            //external script not in bower
-            'app/scripts/ext/loki-angular.js',
+
 
             //App-specific Code
             'app/bower_components/appverse-web-html5-core/dist/appverse-cache/appverse-cache.js',

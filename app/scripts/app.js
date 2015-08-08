@@ -18,7 +18,7 @@
         'appverse.logging',
         'appverse.translate',
         'appverse',
-        'lokijs'
+        'pouchdb'
     ]).run(function ($log, $translate, tmhDynamicLocale, $window) {
         $log.debug('worktrackerApp run');
         //default locale to spanish
@@ -36,9 +36,9 @@
                 'BaseUrl': '/api',
                 'RequestSuffix': ''
             },
-            'I18N_CONFIG': {
-                LocaleFilePattern: 'resources/i18n/angular/angular-locale_{{locale}}.js'
-            }
+            'I18N_CONFIG': {        
+                LocaleFilePattern: 'resources/i18n/angular/angular-locale_{{locale}}.js'      
+            }
 
         },
         appverseMobile: {},

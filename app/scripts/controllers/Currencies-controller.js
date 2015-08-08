@@ -27,9 +27,36 @@
  angular.module('App.Controllers')
 
  .controller('CurrenciesController',
-     function ($scope, Restangular, $log, $modal) {
+     function ($scope, Restangular, $log, $modal, pouchDB) {
          $log.debug('CurrenciesController');
          $scope.name = 'Currencies';
+         /*-----------PuchDB thing------------*/
+
+     var db = pouchDB($scope.name);
+
+    $scope.docs = [];
+
+    $scope.add = function() {
+      db.post({
+        date: new Date().toJSON()
+      });
+    };
+
+    function onChange(change) {
+      $scope.docs.push(change);
+    }
+
+    var options = {
+      /*eslint-disable camelcase */
+      include_docs: true,
+      /*eslint-enable camelcase */
+      live: true
+    };
+
+    db.changes(options).$promise
+      .then(null, null, onChange);
+
+         /*-----------PuchDB thing------------*/
          $scope.columns = [];
          $scope.Currencies = [];
          $scope.baseCurrencies = Restangular.all('Currencies');

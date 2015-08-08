@@ -9,6 +9,7 @@ describe("Unit: Testing CurrenciesController", function () {
     it('should have a properly working CurrenciesController controller', angular.mock.inject(function ($rootScope, $controller) {
 
         var scope = $rootScope.$new();
+
         $controller('CurrenciesController', {
             $scope: scope
         });

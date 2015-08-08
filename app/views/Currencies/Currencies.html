@@ -13,6 +13,14 @@
             <div class="col-md-12">
                 <form novalidate class="form-inline clearfix ng-grid-header" name="filterForm">
                     <div class="pull-left">
+                        <button class="btn btn-primary" ng-click="add()">Add</button>
+                        <div>
+                            <ul>
+                                <li ng-repeat="doc in docs">
+                                    <code ng-bind="doc | json"></code>
+                                </li>
+                            </ul>
+                        </div>
                         <button angular-ripple class="btn btn-action" ng-click="open()">ADD</button>
                     </div>
 

@@ -8,7 +8,7 @@ module.exports = function (config) {
 
     conf.coverageReporter.dir += 'e2e';
 
-    conf.browsers = ['PhantomJS'];
+    conf.browsers = ['Chrome'];
 
     conf.files = [
         'app/bower_components/appverse-web-html5-core/dist/appverse/appverse.min.js',

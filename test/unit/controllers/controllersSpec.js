@@ -8,7 +8,7 @@ describe("Unit: Testing Controllers", function () {
 
         var scope = $rootScope.$new();
         $controller('homeController', {
-            $scope: scope, Loki: lokiAngular
+            $scope: scope
         });
 
         expect(scope.greeting).toEqual('Welcome');
