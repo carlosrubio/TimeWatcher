@@ -6,7 +6,7 @@ Time Watcher
 Powered by Appverse Web 
 ============
 
-Time Watcher is a tool to help controlling the time spent on different tasks. It is writen in HTML5 and based on Appverse HTML5 platform as a AngulaJS reference architecture. 
+Time Watcher is a tool to help controlling the time spent on different tasks. It is writen in HTML5 and based on Appverse HTML5 platform as a AngularJS reference architecture. 
 
 Following are just Roadmap task description:
 - Support configuration of tasks or categories where time is spent.
